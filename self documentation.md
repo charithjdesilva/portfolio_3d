@@ -13,6 +13,9 @@ Technology stack I am going to use
 Create react project template.<br>
     `npm create vite@latest ./ -- --template react`
 
+To run the server, we can use the command,<br>
+    `npm run dev`
+
 Installing tailwindcss. <br>
     `npm install -D tailwindcss`
     <br>
@@ -40,4 +43,8 @@ Installing required dependecncies. <br>
 8. `react-router-dom`: This is a package that provides a set of routing components for React. It can be used to create a multi-page portfolio website with different routes and pages.
 
 `npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom`
+
+## 2nd: Adding public, assests
+
+## 3rd: Creating components
 
