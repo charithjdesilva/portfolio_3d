@@ -48,3 +48,7 @@ Installing required dependecncies. <br>
 
 ## 3rd: Creating components
 
+## 4th: Creating the layout
+    import the needed components, and assests, stylesheets to APP.js
+    1st: create the broswser router
+    2nd: inside the browser router create the sub-sections
