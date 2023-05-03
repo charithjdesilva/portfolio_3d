@@ -6,8 +6,12 @@ Technology stack I am going to use
 - Three.js
 - Tailwind css
 - Blender
+- vite
 
 ## 1st: Initialization
+
+Create react project template.<br>
+    `npm create vite@latest ./ -- --template react`
 
 Installing tailwindcss. <br>
     `npm install -D tailwindcss`
@@ -34,3 +38,6 @@ Installing required dependecncies. <br>
 7. `framer-motion`: This is a package that provides a simple and powerful way to add animations and gestures to React components. You may be using this package to add some motion and interactivity to your portfolio website.
 
 8. `react-router-dom`: This is a package that provides a set of routing components for React. It can be used to create a multi-page portfolio website with different routes and pages.
+
+`npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom`
+
