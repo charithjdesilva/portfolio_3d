@@ -52,3 +52,10 @@ Installing required dependecncies. <br>
     import the needed components, and assests, stylesheets to APP.js
     1st: create the broswser router
     2nd: inside the browser router create the sub-sections
+
+    setActive() recals where we are currently on the page
+
+-------------------------------------------------------------
+## Tailwind css
+
+w-full : means take the full width
