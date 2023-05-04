@@ -24,7 +24,7 @@ Installing tailwindcss. <br>
 Installing required dependecncies. <br>
     *react tilt* uses older version of react. (The --legacy-peer-deps option is used when installing packages with npm. It allows npm to install packages that declare peer dependencies that do not match the version requirements specified in the package.json file of our project.)
 
-    Here's a short description of each package and why I am using them in my project:
+Here's a short description of each package and why I am using them in my project:
 
 1. `@react-three/fiber`: This is a library that allows you to use the Three.js library declaratively in a React component. You may be using this library to create 3D graphics or animations in your portfolio website.
 
@@ -55,6 +55,7 @@ Installing required dependecncies. <br>
 
     setActive() recals where we are currently on the page
 
+### Creating Navigation bar. focus on both larger and small devices.
 -------------------------------------------------------------
 ## Tailwind css
 
