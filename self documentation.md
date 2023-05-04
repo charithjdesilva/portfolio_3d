@@ -55,7 +55,13 @@ Here's a short description of each package and why I am using them in my project
 
     setActive() recals where we are currently on the page
 
-### Creating Navigation bar. focus on both larger and small devices.
+### Creating Navigation bar. 
+
+focus on both larger and small devices.
+
+### Creating the Hero section.
+
+This section includes the 3d model.
 -------------------------------------------------------------
 ## Tailwind css
 
