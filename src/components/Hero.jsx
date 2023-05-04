@@ -23,9 +23,9 @@ const Hero = () => {
              AI/ML learning enthusiast.<br /> I also have experiences in UIUX,<br className='sm:block-hidden' /> and 3D modelling, networking.
           </p>
         </div>
-
-        
       </div>
+
+      <ComputersCanvas />
     </section>
   )
 }

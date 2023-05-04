@@ -44,6 +44,8 @@ Here's a short description of each package and why I am using them in my project
 
 `npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-tilt react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom`
 
+`npm install --leagacy-peer-deps three`
+
 ## 2nd: Adding public, assests
 
 ## 3rd: Creating components
@@ -62,6 +64,17 @@ focus on both larger and small devices.
 ### Creating the Hero section.
 
 This section includes the 3d model.
+
+#### Creating the react-three/fiber canvas
+
+In this canvas we can place our 3d Model.
+OrbitControls, Preload, useGLTF helps us to draw on the canvas.
+
+When creating a 3D model we are using `mesh` instead of `div`.
+We have to crate a light, otherwise we cannot sea it.
+
+fov - stands for field of view
+maxPolarAngle, minPolarAngle we can rotate on a specific angle only.
 -------------------------------------------------------------
 ## Tailwind css
 
