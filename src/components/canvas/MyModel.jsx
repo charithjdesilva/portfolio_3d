@@ -29,7 +29,7 @@ const MyModel = () => {
       object={myModel.scene} 
       scale={10} 
       position={[0, -2.25, 0]}
-      rotation={[0, 1.45, 0]}
+      rotation={[0, 1.415, 0]}
        />
     </mesh>
   )
