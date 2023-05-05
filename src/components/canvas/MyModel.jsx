@@ -3,8 +3,8 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
 
-const Computers = () => {
-  const computer = useGLTF('./MyModel/myModel.glb');
+const MyModel = () => {
+  const myModel = useGLTF('./MyModel/myModel.glb');
 
   return (
     <mesh>
@@ -26,16 +26,16 @@ const Computers = () => {
       castShadow
       shadow-mapSize={1024}/>
       <primitive
-      object={computer.scene} 
+      object={myModel.scene} 
       scale={10} 
       position={[0, -2.25, 0]}
-      // rotation={[-0.01, -0.2, -0.1]}
+      rotation={[0, 1.45, 0]}
        />
     </mesh>
   )
 }
 
-const ComputersCanvas = () => {
+const MyModelCanvas = () => {
   return (
     <Canvas
     frameloop='demand'
@@ -48,7 +48,7 @@ const ComputersCanvas = () => {
         <OrbitControls enableZoom={false}
         maxPolarAngle={Math.PI / 2}
         minPolarAngle={Math.PI / 2}/>
-        <Computers />
+        <MyModel />
       </Suspense>
 
       <Preload all/>
@@ -56,4 +56,4 @@ const ComputersCanvas = () => {
   );
 }
 
-export default ComputersCanvas;
+export default MyModelCanvas;
