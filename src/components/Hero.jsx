@@ -27,9 +27,10 @@ const Hero = () => {
 
       <MyModelCanvas />
 
-      <div className='absolute left-5 xs:bottom-0 bottom-32 w-full flex justify-start items-center'>
-        <a href='#about'>
-          <div className='w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
+      <div className='absolute xs:bottom-0 bottom-32 w-full flex justify-end items-center pe-4'>
+        <a href='#about' className='flex items-center'>
+          Press to slide down&nbsp; | &nbsp;&nbsp;
+          <div className='w-[35px] h-[64px] left-5 rounded-3xl border-4 border-secondary flex justify-center items-start p-2'>
             <motion.dev 
               animate={{
                 y: [0,24,0] // move 24px up and down
