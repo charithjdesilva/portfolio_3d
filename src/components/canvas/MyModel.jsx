@@ -2,6 +2,7 @@ import React, {Suspense, useEffect, useRef, useState} from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
+import * as THREE from "three";
 
 const MyModel = ({isMobile}) => {
   const myModel = useGLTF('./MyModel/myModel.glb');
@@ -62,16 +63,18 @@ const MyModelCanvas = () => {
 
   return (
     <Canvas
-      frameloop='demand'
-      shadows
-      camera={{position: [20, 3, 5], fov: 25}}
-      gl={{preserveDrawingBuffer: true}}>
+    frameloop='demand'
+    shadows
+    camera={{position: [20, 3, 5], fov: 25}}
+    gl={{preserveDrawingBuffer: true}}>
       {/* have a loader while the moddel is loading, we use Suspense */}
       <Suspense fallback={<CanvasLoader />}>
         {/* will alow us to move, rotate. PolarAngle makes it allowing only specific angle */}
         <OrbitControls enableZoom={false}
         maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}/>
+        minPolarAngle={Math.PI / 2}
+        target={isMobile ? [0, 0, 0] : [0, 0, -1.125]}
+        />
         <MyModel isMobile={isMobile} />
       </Suspense>
 
