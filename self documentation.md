@@ -78,6 +78,7 @@ maxPolarAngle, minPolarAngle we can rotate on a specific angle only.
 
 #### Creating scrolling button with framer motion
 
+#### Creating the About section
 -------------------------------------------------------------
 ## Tailwind css
 
