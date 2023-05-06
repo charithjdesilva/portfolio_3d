@@ -62,10 +62,10 @@ const MyModelCanvas = () => {
 
   return (
     <Canvas
-    frameloop='demand'
-    shadows
-    camera={{position: [20, 3, 5], fov: 25}}
-    gl={{preserveDrawingBuffer: true}}>
+      frameloop='demand'
+      shadows
+      camera={{position: [20, 3, 5], fov: 25}}
+      gl={{preserveDrawingBuffer: true}}>
       {/* have a loader while the moddel is loading, we use Suspense */}
       <Suspense fallback={<CanvasLoader />}>
         {/* will alow us to move, rotate. PolarAngle makes it allowing only specific angle */}
