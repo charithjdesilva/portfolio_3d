@@ -79,6 +79,8 @@ maxPolarAngle, minPolarAngle we can rotate on a specific angle only.
 #### Creating scrolling button with framer motion
 
 #### Creating the About section
+
+    hoc stands for Higher Order Component
 -------------------------------------------------------------
 ## Tailwind css
 
