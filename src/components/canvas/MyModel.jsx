@@ -2,35 +2,61 @@ import React, {Suspense, useEffect, useRef, useState} from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
+import * as THREE from 'three'; // Import THREE
+import { BoxHelper } from 'three'; // import BoxHelper
 
 const MyModel = ({isMobile}) => {
   const myModel = useGLTF('./MyModel/myModel.glb');
+  
+  const meshRef = useRef(); // create a ref for the mesh
+
+  // wait until the model is loaded before getting the mesh
+  useEffect(() => {
+    if (myModel) {
+      meshRef.current = myModel.scene.children[0];
+    }
+  }, [myModel]);
+
+  // create a box helper for the mesh and add it to the scene
+  useEffect(() => {
+    if (meshRef.current) {
+      const box = new BoxHelper(meshRef.current, 0xffff00);
+      box.name = 'BoundingBox'; // give the helper a name
+      meshRef.current.parent.add(box); // add the helper to the parent of the mesh
+    }
+  }, [meshRef.current]);
 
   return (
-    <mesh>
-      <hemisphereLight intensity={0.50}
-        groundColor="black" />
-      <pointLight intensity={1} />
-      <spotLight 
-        position={[-20, 50, 10]}
-        angle={0.12} 
-        penumbra={1} 
-        intensity={0.5}
-        castShadow
-        shadow-mapSize={1024}/>
-      <spotLight 
-        position={[20, 50, 10]}
-        angle={0.12} 
-        penumbra={1} 
-        intensity={0.5}
-        castShadow
-        shadow-mapSize={1024}/>
-      <primitive
-        object={myModel.scene} 
-        scale={isMobile ? 8 : 13} 
-        position={isMobile ? [0, -2.25, 0] : [0, -2.25, -2.25]}
-        rotation={[0, 1.405, 0]}
-       />
+    <mesh ref={meshRef}>
+        <hemisphereLight intensity={0.50}
+          groundColor="black" />
+        <pointLight intensity={1} />
+        <spotLight 
+          position={[-20, 50, 10]}
+          angle={0.12} 
+          penumbra={1} 
+          intensity={0.5}
+          castShadow
+          shadow-mapSize={1024}/>
+        <spotLight 
+          position={[20, 50, 10]}
+          angle={0.12} 
+          penumbra={1} 
+          intensity={0.5}
+          castShadow
+          shadow-mapSize={1024}/>
+          <OrbitControls enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+              // target={isMobile ? [0, 0, 0] : [0, 0, 0]}
+              // position={isMobile ? [0, 2.25, 0] : [0, -2, 0]}
+              />
+          <primitive
+            object={myModel.scene} 
+            scale={isMobile ? 6.5 : 12} 
+            // position={isMobile ? [0, -2.25, 0] : [0, -2.25, -2.25]}
+            rotation={[0, 1.405, 0]}
+          />
     </mesh>
   )
 }
@@ -69,12 +95,7 @@ const MyModelCanvas = () => {
       {/* have a loader while the moddel is loading, we use Suspense */}
       <Suspense fallback={<CanvasLoader />}>
         {/* will alow us to move, rotate. PolarAngle makes it allowing only specific angle */}
-        <OrbitControls enableZoom={false}
-        maxPolarAngle={Math.PI / 2}
-        minPolarAngle={Math.PI / 2}
-        target={isMobile ? [0, 0, 0] : [0, 0, -1.125]}
-        />
-        <MyModel isMobile={isMobile} />
+          <MyModel isMobile={isMobile} />
       </Suspense>
 
       <Preload all/>
