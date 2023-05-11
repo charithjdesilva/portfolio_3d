@@ -80,7 +80,11 @@ maxPolarAngle, minPolarAngle we can rotate on a specific angle only.
 
 #### Creating the About section
 
-    hoc stands for Higher Order Component
+    hoc stands for Higher Order Component,
+    Created a Wrapper in HOC and, wrap component arround it so animations and styles will be applied used in the wrapper to the compoonent.
+
+
+#### Creating the Experience section
 -------------------------------------------------------------
 ## Tailwind css
 
