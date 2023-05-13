@@ -65,6 +65,8 @@ focus on both larger and small devices.
 
 This section includes the 3d model.
 
+'Suspense' ensure that while our 3d model is loading we have something to show.
+
 #### Creating the react-three/fiber canvas
 
 In this canvas we can place our 3d Model.
