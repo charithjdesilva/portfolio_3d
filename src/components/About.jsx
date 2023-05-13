@@ -52,7 +52,7 @@ const About = () => {
         A/L subjects. And I turned my world upside down by rising from those ashes again.
       </motion.p>
 
-      <div className='mt-20 flex flex-wrap gap-10'>
+      <div className='mt-20 flex flex-wrap gap-10 place-content-center'>
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index}{...service} />
         ))}
