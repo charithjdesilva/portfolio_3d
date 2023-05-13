@@ -87,6 +87,12 @@ maxPolarAngle, minPolarAngle we can rotate on a specific angle only.
 
 
 #### Creating the Experience section
+
+#### Creating the Feedback section
+
+#### Creating the Contact section
+
+for StarsCanvas we set Suspense fallback={null} to load them quickly
 -------------------------------------------------------------
 ## Tailwind css
 
