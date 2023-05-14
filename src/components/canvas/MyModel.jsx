@@ -6,7 +6,7 @@ import * as THREE from 'three'; // Import THREE
 import { BoxHelper } from 'three'; // import BoxHelper
 
 const MyModel = ({isMobile}) => {
-  const myModel = useGLTF('./MyModel/myModel.glb');
+  const myModel = useGLTF('./MyModel/MyModel.glb');
   
   const meshRef = useRef(); // create a ref for the mesh
 
