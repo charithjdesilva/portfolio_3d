@@ -53,8 +53,8 @@ const MyModel = ({isMobile}) => {
               />
           <primitive
             object={myModel.scene} 
-            scale={isMobile ? 6.5 : 12} 
-            // position={isMobile ? [0, -2.25, 0] : [0, -2.25, -2.25]}
+            scale={isMobile ? 15 : 18} 
+            position={isMobile ? [0, 0, 0] : [0, -1, 0]}
             rotation={[0, 1.405, 0]}
           />
     </mesh>

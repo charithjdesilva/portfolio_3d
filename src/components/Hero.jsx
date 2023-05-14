@@ -13,19 +13,26 @@ const Hero = () => {
           <div className='w-1 sm:5-80 h-40 redLogo-gradient' />{/* create the hr line below circle */}
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm&nbsp;
-            <span className='text-[#ff4057]'>Charith</span>
-          </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I am a fullstack developer,
-            <br className='sm:block-hidden' />
-             AI/ML learning enthusiast.<br /> I also have experiences in UIUX,<br className='sm:block-hidden' /> and 3D modelling, networking.
-          </p>
+        <div className='flex flex-col md:flex-row'>
+          <div>
+            <h1 className={`${styles.heroHeadText} text-white`}>Hi, I'm&nbsp;
+              <span className='text-[#ff4057]'>Charith</span>
+            </h1>
+            <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+              I am a fullstack developer,
+              <br className='sm:block-hidden' />
+              AI/ML learning enthusiast.<br /> I also have experiences in UIUX,<br className='sm:block-hidden' /> and 3D modelling, networking.
+            </p>
+          </div>
+          
+          {/* Use a media query to set the width to 100% on mobile devices */}
+          <div className='w-full' style={{height: '400px'}}>
+            <MyModelCanvas />
+          </div>
         </div>
       </div>
 
-      <MyModelCanvas />
+
 
       <div className='absolute xs:bottom-0 bottom-32 w-full flex justify-end items-center pe-4'>
         <a href='#about' className='flex items-center'>
