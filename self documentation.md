@@ -65,6 +65,8 @@ focus on both larger and small devices.
 
 This section includes the 3d model.
 
+'Suspense' ensure that while our 3d model is loading we have something to show.
+
 #### Creating the react-three/fiber canvas
 
 In this canvas we can place our 3d Model.
@@ -80,7 +82,17 @@ maxPolarAngle, minPolarAngle we can rotate on a specific angle only.
 
 #### Creating the About section
 
-    hoc stands for Higher Order Component
+    hoc stands for Higher Order Component,
+    Created a Wrapper in HOC and, wrap component arround it so animations and styles will be applied used in the wrapper to the compoonent.
+
+
+#### Creating the Experience section
+
+#### Creating the Feedback section
+
+#### Creating the Contact section
+
+for StarsCanvas we set Suspense fallback={null} to load them quickly
 -------------------------------------------------------------
 ## Tailwind css
 
