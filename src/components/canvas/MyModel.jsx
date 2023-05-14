@@ -17,14 +17,14 @@ const MyModel = ({isMobile}) => {
     }
   }, [myModel]);
 
-  // create a box helper for the mesh and add it to the scene
-  useEffect(() => {
-    if (meshRef.current) {
-      const box = new BoxHelper(meshRef.current, 0xffff00);
-      box.name = 'BoundingBox'; // give the helper a name
-      meshRef.current.parent.add(box); // add the helper to the parent of the mesh
-    }
-  }, [meshRef.current]);
+  // // create a box helper for the mesh and add it to the scene
+  // useEffect(() => {
+  //   if (meshRef.current) {
+  //     const box = new BoxHelper(meshRef.current, 0xffff00);
+  //     box.name = 'BoundingBox'; // give the helper a name
+  //     meshRef.current.parent.add(box); // add the helper to the parent of the mesh
+  //   }
+  // }, [meshRef.current]);
 
   return (
     <mesh ref={meshRef}>
