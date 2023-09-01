@@ -2,20 +2,28 @@ import React, {Suspense, useEffect, useRef, useState} from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Preload, useGLTF } from '@react-three/drei';
 import CanvasLoader from '../Loader';
-import * as THREE from 'three'; // Import THREE
-import { BoxHelper } from 'three'; // import BoxHelper
+// import * as THREE from 'three'; // Import THREE
+// import { BoxHelper } from 'three'; // import BoxHelper
+import { useAnimations } from '@react-three/drei';
 
 const MyModel = ({isMobile}) => {
-  const myModel = useGLTF('./MyModel/MyModel.glb');
-  
+  // const myModel = useGLTF('./MyModel/MyModel.glb');
+  // const myModel = useGLTF('./planet/MyModel3.glb');
+  const myModel = useGLTF('./MyModel/MyModelFormal.glb');
+
+  const { nodes, animations } = useGLTF('./MyModel/MyModelFormal.glb');
   const meshRef = useRef(); // create a ref for the mesh
 
-  // wait until the model is loaded before getting the mesh
-  useEffect(() => {
-    if (myModel) {
-      meshRef.current = myModel.scene.children[0];
-    }
-  }, [myModel]);
+// Get animations and actions
+const { actions } = useAnimations(animations, meshRef);
+
+// Wait until the model is loaded before getting the mesh
+useEffect(() => {
+  if (myModel) {
+    meshRef.current = myModel.scene.children[0];
+    actions['Armature|mixamo.com|Layer0'].play();
+  }
+}, [myModel, actions]);
 
   // // create a box helper for the mesh and add it to the scene
   // useEffect(() => {
@@ -28,21 +36,21 @@ const MyModel = ({isMobile}) => {
 
   return (
     <mesh ref={meshRef}>
-        <hemisphereLight intensity={0.50}
+        <hemisphereLight intensity={1}
           groundColor="black" />
         <pointLight intensity={1} />
         <spotLight 
           position={[-20, 50, 10]}
           angle={0.12} 
           penumbra={1} 
-          intensity={0.5}
+          intensity={0.8}
           castShadow
           shadow-mapSize={1024}/>
         <spotLight 
           position={[20, 50, 10]}
           angle={0.12} 
           penumbra={1} 
-          intensity={0.5}
+          intensity={0.8}
           castShadow
           shadow-mapSize={1024}/>
           <OrbitControls enableZoom={false}
@@ -54,7 +62,7 @@ const MyModel = ({isMobile}) => {
           <primitive
             object={myModel.scene} 
             scale={isMobile ? 15 : 18} 
-            position={isMobile ? [0, 0, 0] : [0, -1, 0]}
+            position={isMobile ? [0, -22, 0] : [0, -26, 0]}
             rotation={[0, 1.405, 0]}
           />
     </mesh>
@@ -90,7 +98,7 @@ const MyModelCanvas = () => {
     <Canvas
     frameloop='demand'
     shadows
-    camera={{position: [20, 3, 5], fov: 25}}
+    camera={{position: [40, 3, 5], fov: 25}}
     gl={{preserveDrawingBuffer: true}}>
       {/* have a loader while the moddel is loading, we use Suspense */}
       <Suspense fallback={<CanvasLoader />}>
