@@ -6,66 +6,35 @@ import CanvasLoader from '../Loader';
 // import { BoxHelper } from 'three'; // import BoxHelper
 import { useAnimations } from '@react-three/drei';
 
-const MyModel = ({isMobile}) => {
-  // const myModel = useGLTF('./MyModel/MyModel.glb');
-  // const myModel = useGLTF('./planet/MyModel3.glb');
-  const myModel = useGLTF('./MyModel/MyModelFormal.glb');
+const MyModel = (props) => {
+  const group = useRef()
+  const { nodes, materials, animations } = useGLTF('./planet/MyModel3.glb')
+  const { actions } = useAnimations(animations, group)
 
-  const { nodes, animations } = useGLTF('./MyModel/MyModelFormal.glb');
-  const meshRef = useRef(); // create a ref for the mesh
-
-// Get animations and actions
-const { actions } = useAnimations(animations, meshRef);
-
-// Wait until the model is loaded before getting the mesh
-useEffect(() => {
-  if (myModel) {
-    meshRef.current = myModel.scene.children[0];
+  useEffect(() => {
+    console.log(actions['Armature|mixamo.com|Layer0']);
     actions['Armature|mixamo.com|Layer0'].play();
-  }
-}, [myModel, actions]);
-
-  // // create a box helper for the mesh and add it to the scene
-  // useEffect(() => {
-  //   if (meshRef.current) {
-  //     const box = new BoxHelper(meshRef.current, 0xffff00);
-  //     box.name = 'BoundingBox'; // give the helper a name
-  //     meshRef.current.parent.add(box); // add the helper to the parent of the mesh
-  //   }
-  // }, [meshRef.current]);
+  });
 
   return (
-    <mesh ref={meshRef}>
-        <hemisphereLight intensity={1}
+    <group ref={group} {...props} dispose={null}>
+      <group name="Scene" position={props.isMobile ? [0, -1.25, 0] : [0, -2.5, 0]}>
+        <hemisphereLight intensity={0.8}
           groundColor="black" />
-        <pointLight intensity={1} />
-        <spotLight 
-          position={[-20, 50, 10]}
-          angle={0.12} 
-          penumbra={1} 
-          intensity={0.8}
-          castShadow
-          shadow-mapSize={1024}/>
-        <spotLight 
-          position={[20, 50, 10]}
-          angle={0.12} 
-          penumbra={1} 
-          intensity={0.8}
-          castShadow
-          shadow-mapSize={1024}/>
-          <OrbitControls enableZoom={false}
-              maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 2}
-              // target={isMobile ? [0, 0, 0] : [0, 0, 0]}
-              // position={isMobile ? [0, 2.25, 0] : [0, -2, 0]}
-              />
-          <primitive
-            object={myModel.scene} 
-            scale={isMobile ? 15 : 18} 
-            position={isMobile ? [0, -22, 0] : [0, -26, 0]}
-            rotation={[0, 1.405, 0]}
-          />
-    </mesh>
+        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?2:2.65}>
+          <primitive object={nodes.mixamorigHips} />
+          <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} />
+          <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} />
+          <skinnedMesh name="Wolf3D_Body" geometry={nodes.Wolf3D_Body.geometry} material={materials.Wolf3D_Body} skeleton={nodes.Wolf3D_Body.skeleton} />
+          <skinnedMesh name="Wolf3D_Hair" geometry={nodes.Wolf3D_Hair.geometry} material={materials.Wolf3D_Hair} skeleton={nodes.Wolf3D_Hair.skeleton} />
+          <skinnedMesh name="Wolf3D_Head" geometry={nodes.Wolf3D_Head.geometry} material={materials.Wolf3D_Skin} skeleton={nodes.Wolf3D_Head.skeleton} />
+          <skinnedMesh name="Wolf3D_Outfit_Bottom" geometry={nodes.Wolf3D_Outfit_Bottom.geometry} material={materials.Wolf3D_Outfit_Bottom} skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton} />
+          <skinnedMesh name="Wolf3D_Outfit_Footwear" geometry={nodes.Wolf3D_Outfit_Footwear.geometry} material={materials.Wolf3D_Outfit_Footwear} skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton} />
+          <skinnedMesh name="Wolf3D_Outfit_Top" geometry={nodes.Wolf3D_Outfit_Top.geometry} material={materials.Wolf3D_Outfit_Top} skeleton={nodes.Wolf3D_Outfit_Top.skeleton} />
+          <skinnedMesh name="Wolf3D_Teeth" geometry={nodes.Wolf3D_Teeth.geometry} material={materials.Wolf3D_Teeth} skeleton={nodes.Wolf3D_Teeth.skeleton} />
+        </group>
+      </group>
+    </group>
   )
 }
 
@@ -96,14 +65,25 @@ const MyModelCanvas = () => {
 
   return (
     <Canvas
-    frameloop='demand'
+    style={{ height: '800px' }}
     shadows
-    camera={{position: [40, 3, 5], fov: 25}}
+    camera={{
+      fov: 45,
+      near: 0.1,
+      far: 100,
+      position: [-2, 3.5, 5]
+    }}
     gl={{preserveDrawingBuffer: true}}>
       {/* have a loader while the moddel is loading, we use Suspense */}
       <Suspense fallback={<CanvasLoader />}>
-        {/* will alow us to move, rotate. PolarAngle makes it allowing only specific angle */}
-          <MyModel isMobile={isMobile} />
+        <OrbitControls
+          // autoRotate
+          enableZoom={false}
+          maxPolarAngle={Math.PI /2}
+          minPolarAngle={Math.PI /2}
+        />
+
+        <MyModel isMobile={isMobile} />
       </Suspense>
 
       <Preload all/>
