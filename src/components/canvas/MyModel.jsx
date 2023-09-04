@@ -72,7 +72,7 @@ const MyModelCanvas = () => {
   return (
     <Canvas
     style={{ height: '800px' }}
-    shadows
+    // shadows
     camera={{
       fov: 45,
       near: 0.1,
@@ -92,7 +92,7 @@ const MyModelCanvas = () => {
         <MyModel isMobile={isMobile} />
       </Suspense>
 
-      <Preload all/>
+      {/* <Preload all/> */}
     </Canvas>
   );
 }
