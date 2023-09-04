@@ -8,12 +8,18 @@ import { useAnimations } from '@react-three/drei';
 
 const MyModel = (props) => {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./planet/MyModel3.glb')
+  const { nodes, materials, animations } = useGLTF('./planet/CharithModelOutput.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
+    console.log(nodes);
+    console.log(animations);
+    // Apply a rotation to the group to rotate the entire model
+    group.current.rotation.y = -Math.PI / 4; // Rotate by -45 degrees
+
     console.log(actions['Armature|mixamo.com|Layer0']);
-    actions['Armature|mixamo.com|Layer0'].play();
+    actions['Armature.001|mixamo.com|Layer0'].play();
+
   });
 
   return (

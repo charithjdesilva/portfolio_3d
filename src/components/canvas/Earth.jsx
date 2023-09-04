@@ -6,22 +6,25 @@ import CanvasLoader from '../Loader';
 
 const Model = (props) => {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF('./planet/MyModel3.glb')
+  const { nodes, materials, animations } = useGLTF('./planet/CharithModelOutput.glb')
   const { actions } = useAnimations(animations, group)
 
   useEffect(() => {
     console.log(actions['Armature|mixamo.com|Layer0']);
-    actions['Armature|mixamo.com|Layer0'].play();
+
+    group.current.rotation.y = -Math.PI / 4; // Rotate by -45 degrees
+
+    actions['Armature.001|mixamo.com|Layer0'].play();
   });
 
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene"
-      position={props.isMobile?[0, -3, 0]:[0, -2, 0]}
+      position={props.isMobile ? [0, -3.25, 0] : [0, -3, 0]}
       >
         <hemisphereLight intensity={0.8}
           groundColor="black" />
-        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?3:2.5}>
+        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?3.3:3.4}>
           <primitive object={nodes.mixamorigHips} />
           <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} />
           <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} />
