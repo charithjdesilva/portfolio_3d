@@ -27,7 +27,7 @@ const MyModel = (props) => {
       <group name="Scene" position={props.isMobile ? [0, -1.25, 0] : [0, -2.5, 0]}>
         <hemisphereLight intensity={0.8}
           groundColor="black" />
-        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?2:2.65}>
+        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?1.8:2.65}>
           <primitive object={nodes.mixamorigHips} />
           <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} />
           <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} />
