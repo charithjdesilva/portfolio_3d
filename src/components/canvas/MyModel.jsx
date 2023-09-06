@@ -27,7 +27,10 @@ const MyModel = (props) => {
       <group name="Scene" position={props.isMobile ? [0, -1.25, 0] : [0, -2.5, 0]}>
         <hemisphereLight intensity={0.8}
           groundColor="black" />
-        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?1.5:2.65}>
+        <group name="Armature" 
+          rotation={[Math.PI / 2, 0, 0]} 
+          scale={props.isMobile?1:2.65}
+        >
           <primitive object={nodes.mixamorigHips} />
           <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} />
           <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} />
@@ -77,7 +80,7 @@ const MyModelCanvas = () => {
       fov: 45,
       near: 0.1,
       far: 100,
-      position: [-2, 3.5, 5]
+      position: isMobile ? [-2, 3.5, -8] : [-2, 3.5, 5], // Adjusted camera position
     }}
     gl={{preserveDrawingBuffer: true}}>
       {/* have a loader while the moddel is loading, we use Suspense */}
