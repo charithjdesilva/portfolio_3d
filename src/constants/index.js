@@ -116,55 +116,93 @@ import {
   
   const experiences = [
     {
-      title: "React.js Developer",
-      company_name: "Starbucks",
+      title: "GCE Ordinary Level",
+      company_name: "Richmond College",
       icon: starbucks,
       iconBg: "#383E56",
-      date: "March 2020 - April 2021",
+      date: "2013",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "IT - A" ,
+        "English - A",
+        "Mathematics - A",
+        "Science - A",
+        "Commerce - A",
+        "Sinhala - A"
       ],
     },
     {
-      title: "React Native Developer",
-      company_name: "Tesla",
+      title: "GCE Advanced Level",
+      company_name: "Richmond College",
       icon: tesla,
       iconBg: "#E6DEDD",
-      date: "Jan 2021 - Feb 2022",
+      date: "2018",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Combined Mathematics - B",
+        "Chemistry - B",
+        "Physics - C",
+        "With these results got selected to the BSc(Hons) in Computing and Informations System offered by the Faculty of Computing, \n\r\n Sabaragamuwa University"
       ],
     },
     {
-      title: "Web Developer",
+      title: "Pearson Assured Diploma in Business Management",
       company_name: "Shopify",
       icon: shopify,
       iconBg: "#383E56",
-      date: "Jan 2022 - Jan 2023",
+      date: "2020",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        
       ],
     },
     {
-      title: "Full stack Developer",
-      company_name: "Meta",
+      title: "Pearson Assured Diploma in Software Engineering",
+      company_name: "ESOFT",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "2021",
+      points: [
+      ],
+    },
+    {
+      title: "Pearson BTEC Level 5 HND in Software Engineering",
+      company_name: "Pearson BTEC",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "2018-2021",
+      points: [
+        
+      ],
+    },
+    {
+      title: "Google IT Support Professional",
+      company_name: "Google (Coursera Platform)",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "2021",
+      points: [
+        "Technical Support Fundamentals",
+        "The Bits and Bytes of Computer Networking",
+        "Operating Systems and You: Becoming a Power User",
+        "System Administration and IT Infrastructure Services",
+        "IT Security: Defense against the digital dark arts"      ],
+    },
+    {
+      title: "AI/ML Engineer - Stage 1",
+      company_name: "SLIIT",
       icon: meta,
       iconBg: "#E6DEDD",
       date: "Jan 2023 - Present",
       points: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
+    },
+    {
+      title: "BSc(Hons) in Computing and Information Systems",
+      company_name: "Sabaragamuwa University of Sri Lanka",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "Jan 2023 - Present",
+      points: [
+        "Current semester - 3rd year 2nd semester",
+        "GPA - 3.7946",
       ],
     },
   ];

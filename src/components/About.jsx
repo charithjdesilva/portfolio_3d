@@ -36,20 +36,25 @@ const About = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className={styles.sectionSubText}>About me</p>
+        <h2 className={styles.sectionHeadText}>Profile.</h2>
       </motion.div>
 
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled web developer with experiences in
-         React, .NET core, Laravel, Three.js, UiUx, React Native, Bootstrap, Tailwind, MUI. 
-        I'm a critical thinker and a problem solver. I dedicate to what I learn. And my self moto is 
+        I am an undergraduate student deeply passionate about AI/ML
+engineering, with expertise in machine learning, deep learning,
+and artificial intelligence. My focus extends to seamlessly
+integrating AI/ML into web and mobile applications. My
+adaptability and passion drive me to explore emerging AI
+technologies, including Computer Vision, AR/VR, and their
+intersections with AI/ML.
+<br /> <br />
+I'm also a critical thinker and a problem solver. I dedicate to what I learn. And my self moto is 
         "Do not learn, learn why we are learning it." I am also a AI/ML enthusiast and have experineces 
-        with computer vision. I did my A/L's in physical science stream. I have been to the very bottom at my education where I got 3 Failures for all 
-        A/L subjects. And I turned my world upside down by rising from those ashes again.
+        with computer vision. I did my A/L's in physical science stream. 
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10 place-content-center'>
