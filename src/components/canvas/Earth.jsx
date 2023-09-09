@@ -24,7 +24,7 @@ const Model = (props) => {
       >
         <hemisphereLight intensity={0.8}
           groundColor="black" />
-        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?3.3:3.4}>
+        <group name="Armature" rotation={[Math.PI / 2, 0, 0]} scale={props.isMobile?3.3:3}>
           <primitive object={nodes.mixamorigHips} />
           <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} />
           <skinnedMesh name="EyeRight" geometry={nodes.EyeRight.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeRight.skeleton} />
