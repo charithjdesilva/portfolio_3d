@@ -116,31 +116,46 @@ import {
   
   const experiences = [
     {
-      title: "GCE Ordinary Level",
-      company_name: "Richmond College",
-      icon: starbucks,
-      iconBg: "#383E56",
-      date: "2013",
+      title: "BSc(Hons) in Computing and Information Systems",
+      company_name: "Sabaragamuwa University of Sri Lanka",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "Jan 2023 - Present",
       points: [
-        "IT - A" ,
-        "English - A",
-        "Mathematics - A",
-        "Science - A",
-        "Commerce - A",
-        "Sinhala - A"
+        "Current semester - 3rd year 2nd semester",
+        "GPA - 3.7946",
       ],
     },
     {
-      title: "GCE Advanced Level",
-      company_name: "Richmond College",
-      icon: tesla,
+      title: "AI/ML Engineer - Stage 1",
+      company_name: "SLIIT",
+      icon: meta,
       iconBg: "#E6DEDD",
-      date: "2018",
+      date: "Jan 2023 - Present",
       points: [
-        "Combined Mathematics - B",
-        "Chemistry - B",
-        "Physics - C",
-        "With these results got selected to the BSc(Hons) in Computing and Informations System offered by the Faculty of Computing, \n\r\n Sabaragamuwa University"
+      ],
+    },
+    {
+      title: "Google IT Support Professional",
+      company_name: "Google (Coursera Platform)",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "2021",
+      points: [
+        "Technical Support Fundamentals",
+        "The Bits and Bytes of Computer Networking",
+        "Operating Systems and You: Becoming a Power User",
+        "System Administration and IT Infrastructure Services",
+        "IT Security: Defense against the digital dark arts"      ],
+    },
+    {
+      title: "Pearson BTEC Level 5 HND in Software Engineering",
+      company_name: "Pearson BTEC",
+      icon: meta,
+      iconBg: "#E6DEDD",
+      date: "2018-2021",
+      points: [
+        
       ],
     },
     {
@@ -163,46 +178,31 @@ import {
       ],
     },
     {
-      title: "Pearson BTEC Level 5 HND in Software Engineering",
-      company_name: "Pearson BTEC",
-      icon: meta,
+      title: "GCE Advanced Level",
+      company_name: "Richmond College",
+      icon: tesla,
       iconBg: "#E6DEDD",
-      date: "2018-2021",
+      date: "2018",
       points: [
-        
+        "Combined Mathematics - B",
+        "Chemistry - B",
+        "Physics - C",
+        "With these results got selected to the BSc(Hons) in Computing and Informations System offered by the Faculty of Computing, \n\r\n Sabaragamuwa University"
       ],
     },
     {
-      title: "Google IT Support Professional",
-      company_name: "Google (Coursera Platform)",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "2021",
+      title: "GCE Ordinary Level",
+      company_name: "Richmond College",
+      icon: starbucks,
+      iconBg: "#383E56",
+      date: "2013",
       points: [
-        "Technical Support Fundamentals",
-        "The Bits and Bytes of Computer Networking",
-        "Operating Systems and You: Becoming a Power User",
-        "System Administration and IT Infrastructure Services",
-        "IT Security: Defense against the digital dark arts"      ],
-    },
-    {
-      title: "AI/ML Engineer - Stage 1",
-      company_name: "SLIIT",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-      ],
-    },
-    {
-      title: "BSc(Hons) in Computing and Information Systems",
-      company_name: "Sabaragamuwa University of Sri Lanka",
-      icon: meta,
-      iconBg: "#E6DEDD",
-      date: "Jan 2023 - Present",
-      points: [
-        "Current semester - 3rd year 2nd semester",
-        "GPA - 3.7946",
+        "IT - A" ,
+        "English - A",
+        "Mathematics - A",
+        "Science - A",
+        "Commerce - A",
+        "Sinhala - A"
       ],
     },
   ];
