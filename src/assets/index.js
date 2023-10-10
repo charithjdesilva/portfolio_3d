@@ -19,9 +19,14 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
+import threejs from "./tech/threejs.png";
 
 import meta from "./company/meta.png";
+import slitt from "./company/slitt.png";
+import google from "./company/google.png";
+import esoft from "./company/esoft.png";
+import school from "./company/school.png";
+import btech from "./company/btech.png";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
@@ -53,6 +58,11 @@ export {
   typescript,
   threejs,
   meta,
+  slitt,
+  google,
+  btech,
+  esoft,
+  school,
   shopify,
   starbucks,
   tesla,

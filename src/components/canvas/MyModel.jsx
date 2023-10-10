@@ -15,7 +15,7 @@ const MyModel = (props) => {
     console.log(nodes);
     console.log(animations);
     // Apply a rotation to the group to rotate the entire model
-    group.current.rotation.y = -Math.PI / 4; // Rotate by -45 degrees
+    group.current.rotation.y = props.isMobile? Math.PI / 4: -Math.PI / 4; // Rotate by -45 degrees
 
     console.log(actions['Armature|mixamo.com|Layer0']);
     actions['Armature.001|mixamo.com|Layer0'].play();

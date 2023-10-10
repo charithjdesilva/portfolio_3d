@@ -16,6 +16,11 @@ import {
     figma,
     docker,
     meta,
+    slitt,
+    esoft,
+    btech,
+    google,
+    school,
     starbucks,
     tesla,
     shopify,
@@ -31,8 +36,8 @@ import {
       title: "About",
     },
     {
-      id: "work",
-      title: "Work",
+      id: "education",
+      title: "Education",
     },
     {
       id: "contact",
@@ -42,19 +47,19 @@ import {
   
   const services = [
     {
-      title: "Web Developer",
+      title: "AI/ML Engineering",
       icon: web,
     },
     {
-      title: "React Native Developer",
+      title: "Computer Vision",
       icon: mobile,
     },
     {
-      title: "Backend Developer",
+      title: "Data Science",
       icon: backend,
     },
     {
-      title: "Content Creator",
+      title: "Web Development",
       icon: creator,
     },
   ];
@@ -129,7 +134,7 @@ import {
     {
       title: "AI/ML Engineer - Stage 1",
       company_name: "SLIIT",
-      icon: meta,
+      icon: slitt,
       iconBg: "#E6DEDD",
       date: "Jan 2023 - Present",
       points: [
@@ -138,7 +143,7 @@ import {
     {
       title: "Google IT Support Professional",
       company_name: "Google (Coursera Platform)",
-      icon: meta,
+      icon: google,
       iconBg: "#E6DEDD",
       date: "2021",
       points: [
@@ -151,7 +156,7 @@ import {
     {
       title: "Pearson BTEC Level 5 HND in Software Engineering",
       company_name: "Pearson BTEC",
-      icon: meta,
+      icon: btech,
       iconBg: "#E6DEDD",
       date: "2018-2021",
       points: [
@@ -160,8 +165,8 @@ import {
     },
     {
       title: "Pearson Assured Diploma in Business Management",
-      company_name: "Shopify",
-      icon: shopify,
+      company_name: "ESOFT",
+      icon: esoft,
       iconBg: "#383E56",
       date: "2020",
       points: [
@@ -171,7 +176,7 @@ import {
     {
       title: "Pearson Assured Diploma in Software Engineering",
       company_name: "ESOFT",
-      icon: meta,
+      icon: esoft,
       iconBg: "#E6DEDD",
       date: "2021",
       points: [
@@ -180,7 +185,7 @@ import {
     {
       title: "GCE Advanced Level",
       company_name: "Richmond College",
-      icon: tesla,
+      icon: school,
       iconBg: "#E6DEDD",
       date: "2018",
       points: [
@@ -193,7 +198,7 @@ import {
     {
       title: "GCE Ordinary Level",
       company_name: "Richmond College",
-      icon: starbucks,
+      icon: school,
       iconBg: "#383E56",
       date: "2013",
       points: [

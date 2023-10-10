@@ -24,7 +24,7 @@ const ServiceCard = ({ index, title, icon }) => {
           flex justify-evenly items-center flex-col'
         >
           <img src={icon} alt={title} 
-          className='w-16 h-16 object-contain'/>
+          className='w-24 h-24 object-contain'/>
           <h3 className='text-white text-[20px] font-bold text-center'>{title}</h3>
         </div>
       </motion.div>
@@ -53,8 +53,7 @@ technologies, including Computer Vision, AR/VR, and their
 intersections with AI/ML.
 <br /> <br />
 I'm also a critical thinker and a problem solver. I dedicate to what I learn. And my self moto is 
-        "Do not learn, learn why we are learning it." I am also a AI/ML enthusiast and have experineces 
-        with computer vision. I did my A/L's in physical science stream. 
+        "Do not learn, learn why we are learning it." I am also a interested in Web Development and UI/UX. I did my A/L's in physical science stream. 
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10 place-content-center'>
