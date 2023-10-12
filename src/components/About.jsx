@@ -50,10 +50,10 @@ and artificial intelligence. My focus extends to seamlessly
 integrating AI/ML into web and mobile applications. My
 adaptability and passion drive me to explore emerging AI
 technologies, including Computer Vision, AR/VR, and their
-intersections with AI/ML.
+intersections with AI/ML.  I am also interested in Web Development and UI/UX. 
 <br /> <br />
-I'm also a critical thinker and a problem solver. I dedicate to what I learn. And my self moto is 
-        "Do not learn, learn why we are learning it." I am also a interested in Web Development and UI/UX. I did my A/L's in physical science stream. 
+I'm a critical thinker and a problem solver. I dedicate to what I learn. And my self moto is 
+        "Do not learn, learn why we are learning it."
       </motion.p>
 
       <div className='mt-20 flex flex-wrap gap-10 place-content-center'>
