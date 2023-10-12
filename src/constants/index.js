@@ -219,7 +219,7 @@ import {
       name: "DiscoverIFS challenge",
       designation: "by the IFS company",
       company: "Sri Lanka",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      image: "../assets/achievements/IFS.png",
     },
     {
       testimonial:
@@ -227,7 +227,7 @@ import {
       name: "HackX 2021",
       designation: "by Department of Industrial Management",
       company: "UoK",
-      image: "https://randomuser.me/api/portraits/women/4.jpg",
+      image: "../assets/achievements/UoK.png",
     },
     {
       testimonial:
@@ -235,73 +235,81 @@ import {
       name: "Indispier 2021",
       designation: "by the IEEE Student Branch",
       company: "Wayamba University of Sri Lanka",
-      image: "https://randomuser.me/api/portraits/men/5.jpg",
+      image: "../assets/achievements/UoW.png",
     },
   ];
   
   const projects = [
     {
-      name: "Car Rent",
+      name: "Criminal Identification System with AI",
       description:
-        "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+        "This system uses computer vision, face-detection library and dlib library to recognize photos of criminals. Accuracy : 0.983",
       tags: [
+        {
+          name: "OpenCV",
+          color: "green-text-gradient",
+        },
         {
           name: "react",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "MySQL",
           color: "green-text-gradient",
         },
         {
-          name: "tailwind",
+          name: "FastAPI",
           color: "pink-text-gradient",
         },
       ],
       image: carrent,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/charithjdesilva/Face-detection-system",
     },
     {
-      name: "Job IT",
+      name: "Face Recognition Attendance System",
       description:
-        "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+        "Can save measurement of faces and using them it can identify a person. And then it will mark the attendance to a csv",
       tags: [
         {
-          name: "react",
+          name: "Python",
           color: "blue-text-gradient",
         },
         {
-          name: "restapi",
+          name: "OpenCV",
           color: "green-text-gradient",
         },
         {
-          name: "scss",
+          name: "Dlib",
           color: "pink-text-gradient",
+        },
+        {
+          name: "NumPy",
+          color: "blue-text-gradient",
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/charithjdesilva/Face-detection-system",
     },
     {
-      name: "Trip Guide",
+      name: "Virtual Whiteboard",
       description:
-        "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+        "This is an innovative product created by me while learning to work with the OpenCV library. It provide users to write on air and it is drawn on a canvas area as in a whiteboard.",
       tags: [
         {
-          name: "nextjs",
+          name: "Python",
           color: "blue-text-gradient",
         },
         {
-          name: "supabase",
+          name: "OpenCV",
           color: "green-text-gradient",
         },
         {
-          name: "css",
+          name: "NumPy",
           color: "pink-text-gradient",
         },
       ],
       image: tripguide,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/charithjdesilva/Virtual-Whiteboard",
     },
   ];
   
