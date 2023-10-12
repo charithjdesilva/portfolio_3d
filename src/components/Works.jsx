@@ -72,18 +72,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          I have worked on a variety of projects throughout my career, utilizing a range of technologies and tools. 
-One project I recently completed was a desktop application built with C#, 
-which focused on [describe the application's purpose or main functionality]. 
-Another project involved developing a Java Swing application for [describe the application's purpose or main functionality]. 
-I have also worked extensively with web development technologies, including React, Bootstrap, and Tailwind. 
-For a recent project, I used React to build a [describe the project], 
-which [describe the project's main objectives or features]. 
-Additionally, I have experience working with .NET, 
-which I used to develop [describe a project or feature built with .NET]. 
-Finally, I have some experience with three.js, 
-which I used to create [describe a project or feature built with three.js]. 
-Overall, I enjoy working with a variety of technologies and am always eager to learn more.
+          I have been actively involved in various projects, both individually and in collaboration with teams. Notable projects include an ongoing Criminal Identification System with AI, achieving a remarkable accuracy of 0.983 in recognizing photos of criminals using computer vision and face-detection libraries. I've also developed a Face Recognition Attendance System, a Number Plate Catcher to identify and capture vehicle number plates, and an innovative Virtual Whiteboard that allows users to draw on air. Additionally, I've created a Spam Classification Model, utilizing Natural Language Processing to classify SMS messages with an accuracy of 0.97. Lastly, my Live Document Scanner project provides real-time video scanning capabilities using connected cameras. These projects showcase my interset in learning Python, OpenCV, NumPy, Dlib, React, FastAPI, MySQL, Pandas, NLTK, and Scikit-learn, reflecting my passion for exploring diverse aspects of AI, ML, and computer vision.
         </motion.p>
       </div>
 
