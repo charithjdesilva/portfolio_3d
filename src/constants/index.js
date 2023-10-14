@@ -64,20 +64,20 @@ import {
   
   const services = [
     {
-      title: "AI/ML Engineering",
+      title: "Web Development",
+      icon: creator,
+    },
+    {
+      title: "Desktop App Development",
       icon: web,
     },
     {
-      title: "Computer Vision",
-      icon: mobile,
-    },
-    {
-      title: "Data Science",
+      title: "SQL/NoSQL Databases",
       icon: backend,
     },
     {
-      title: "Web/Desktop App Development",
-      icon: creator,
+      title: "AI/ML Engineering",
+      icon: mobile,
     },
   ];
   
