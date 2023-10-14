@@ -34,6 +34,11 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import juiceBar from "./juiceBar.png";
+import visiventure from "./visiventure.png";
+import galleria from "./galleria.png";
+import gtoys from "./gtoys.png";
+import movieLookups from "./movieLookups.png";
 
 import IFS from "./achievements/IFS.png";
 import UoK from "./achievements/UoK.png";
@@ -76,4 +81,9 @@ export {
   IFS,
   UoK,
   UoW,
+  juiceBar,
+  visiventure,
+  galleria,
+  gtoys,
+  movieLookups
 };

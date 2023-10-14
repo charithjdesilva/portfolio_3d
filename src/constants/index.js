@@ -31,6 +31,11 @@ import {
     IFS,
     UoK,
     UoW,
+    juiceBar,
+    visiventure,
+    galleria,
+    gtoys,
+    movieLookups,
   } from "../assets";
   
   export const navLinks = [
@@ -41,6 +46,14 @@ import {
     {
       id: "education",
       title: "Education",
+    },
+    {
+      id: "projects",
+      title: "Projects",
+    },
+    {
+      id: "achievements",
+      title: "Achievements",
     },
     {
       id: "contact",
@@ -62,7 +75,7 @@ import {
       icon: backend,
     },
     {
-      title: "Web Development",
+      title: "Web/Desktop App Development",
       icon: creator,
     },
   ];
@@ -261,7 +274,7 @@ import {
           color: "green-text-gradient",
         },
         {
-          name: "react",
+          name: "React",
           color: "blue-text-gradient",
         },
         {
@@ -321,6 +334,124 @@ import {
       ],
       image: tripguide,
       source_code_link: "https://github.com/charithjdesilva/Virtual-Whiteboard",
+    },
+    {
+      name: "E-Commerce Store for a Juice Bar",
+      description:
+        "Created an e-commerce store for a Juice bar using Laravel. It uses MVC architecture. Customers can view products and add, delete, edit quantity of products added to cart.",
+      tags: [
+        {
+          name: "Laravel",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "MySQL",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Bootstrap",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: juiceBar,
+      source_code_link: "https://github.com/charithjdesilva/JuiceBar-E-Commerce-Web-App",
+    },
+    {
+      name: "Visiventure",
+      description:
+        "Visiventure is a YouTube Clone Web Application. Created using React functional components. It uses a Youtube API to fetch and display videos and details. Has the features of youtube such as displaying trending videos, view a single video, view channels, sidebar navigations.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "RapidAPI",
+          color: "green-text-gradient",
+        },
+        {
+          name: "MaterialUI",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: visiventure,
+      source_code_link: "https://github.com/charithjdesilva/visiventure",
+    },
+    {
+      name: "Galleria",
+      description:
+        "This is a simple Instagram Clone Web Application. Created using React class components. (with React 18). Has features adding, removing images, and commenting, reacting to posts.",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Redux",
+          color: "green-text-gradient",
+        },
+        {
+          name: "FireStore",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: galleria,
+      source_code_link: "https://github.com/charithjdesilva/Galleria",
+    },
+    {
+      name: "2-Factor Authentication",
+      description:
+        "This is a secured web logging system (Group Project). Implementation of QR code authentication and OTP verification using for a web app. Allows a user to enter their login credetntials, if they are correct allow them to login to the system either using a QR code provided to them or an OTP send to gmail.",
+      tags: [
+        {
+          name: "NodeJs",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "jQuery",
+          color: "green-text-gradient",
+        },
+        {
+          name: "Bootstrap",
+          color: "pink-text-gradient",
+        },
+        {
+          name: "EJs",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: galleria,
+      source_code_link: "https://github.com/charithjdesilva/Galleria",
+    },
+    {
+      name: "Gryfindo Toys",
+      description:
+        "This is a windows desktop application created using Windows forms. Implementation of OOP concepts is focused on this project. Also has utilized better UIs for the app.",
+      tags: [
+        {
+          name: "Windwos-forms with C#",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "Visual Studio 2015",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: gtoys,
+      source_code_link: "https://github.com/charithjdesilva/Galleria",
+    },
+    {
+      name: "Movie-Lookups",
+      description:
+        "This is a movie searching web app created with React and Open movie database API. A user can search movies using the seacrh bar and it will return all availabe movies according to the searched keyword. Created using react functional componenets",
+      tags: [
+        {
+          name: "React",
+          color: "blue-text-gradient",
+        },
+      ],
+      image: movieLookups,
+      source_code_link: "https://github.com/charithjdesilva/movie_lookup",
     },
   ];
   
