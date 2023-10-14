@@ -39,6 +39,7 @@ import visiventure from "./visiventure.png";
 import galleria from "./galleria.png";
 import gtoys from "./gtoys.png";
 import movieLookups from "./movieLookups.png";
+import twofac from "./twofac.png";
 
 import IFS from "./achievements/IFS.png";
 import UoK from "./achievements/UoK.png";
@@ -85,5 +86,6 @@ export {
   visiventure,
   galleria,
   gtoys,
-  movieLookups
+  movieLookups,
+  twofac
 };

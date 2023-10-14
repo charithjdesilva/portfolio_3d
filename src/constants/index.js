@@ -36,6 +36,7 @@ import {
     galleria,
     gtoys,
     movieLookups,
+    twofac,
   } from "../assets";
   
   export const navLinks = [
@@ -420,7 +421,7 @@ import {
           color: "blue-text-gradient",
         },
       ],
-      image: galleria,
+      image: twofac,
       source_code_link: "https://github.com/charithjdesilva/Galleria",
     },
     {
