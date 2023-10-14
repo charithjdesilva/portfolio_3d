@@ -28,6 +28,9 @@ import {
     jobit,
     tripguide,
     threejs,
+    IFS,
+    UoK,
+    UoW,
   } from "../assets";
   
   export const navLinks = [
@@ -219,15 +222,15 @@ import {
       name: "DiscoverIFS challenge",
       designation: "by the IFS company",
       company: "Sri Lanka",
-      image: "../assets/achievements/IFS.png",
+      image: IFS,
     },
     {
       testimonial:
-        "Won the 1st place at the Inter-university startup challenge.",
+        "Won the 1st place at the HackX 2021 (an Inter-university startup challenge).",
       name: "HackX 2021",
       designation: "by Department of Industrial Management",
       company: "UoK",
-      image: "../assets/achievements/UoK.png",
+      image: UoK,
     },
     {
       testimonial:
@@ -235,8 +238,16 @@ import {
       name: "Indispier 2021",
       designation: "by the IEEE Student Branch",
       company: "Wayamba University of Sri Lanka",
-      image: "../assets/achievements/UoW.png",
+      image: UoW,
     },
+    // {
+    //   testimonial:
+    //     "1st runner up at an Indie Game Development Workshop.",
+    //   name: "Indispier 2021",
+    //   designation: "by the IEEE Student Branch",
+    //   company: "Wayamba University of Sri Lanka",
+    //   image: "../assets/achievements/UoW.png",
+    // },
   ];
   
   const projects = [

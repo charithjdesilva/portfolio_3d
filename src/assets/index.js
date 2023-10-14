@@ -35,6 +35,10 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import IFS from "./achievements/IFS.png";
+import UoK from "./achievements/UoK.png";
+import UoW from "./achievements/UoW.png";
+
 export {
   logo,
   backend,
@@ -69,4 +73,7 @@ export {
   carrent,
   jobit,
   tripguide,
+  IFS,
+  UoK,
+  UoW,
 };
