@@ -1,4 +1,5 @@
-import { EarthCanvas, BallCanvas, MyModelCanvas, StarsCanvas } from './canvas';
+// import { EarthCanvas, BallCanvas, MyModelCanvas, StarsCanvas } from './canvas';
+import { EarthCanvas, MyModelCanvas, StarsCanvas } from './canvas';
 import Hero from './Hero';
 import Navbar from './Navbar';
 import About from './About';
@@ -18,7 +19,7 @@ export {
   Feedbacks,
   Contact,
   EarthCanvas, 
-  BallCanvas, 
+  // BallCanvas, 
   MyModelCanvas, 
   StarsCanvas
 }
