@@ -36,7 +36,7 @@ import {
     galleria,
     gtoys,
     movieLookups,
-    twofac,
+    twofac
   } from "../assets";
   
   export const navLinks = [
