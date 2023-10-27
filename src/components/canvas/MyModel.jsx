@@ -15,7 +15,7 @@ const MyModel = (props) => {
     console.log(nodes);
     console.log(animations);
     // Apply a rotation to the group to rotate the entire model
-    group.current.rotation.y = props.isMobile? Math.PI / 4: -Math.PI / 4; // Rotate by -45 degrees
+    group.current.rotation.y = props.isMobile? -Math.PI / 4: -Math.PI / 4; // Rotate by -45 degrees
 
     console.log(actions['Armature|mixamo.com|Layer0']);
     actions['Armature.001|mixamo.com|Layer0'].play();
@@ -29,7 +29,7 @@ const MyModel = (props) => {
           groundColor="black" />
         <group name="Armature" 
           rotation={[Math.PI / 2, 0, 0]} 
-          scale={props.isMobile?1:2.65}
+          scale={props.isMobile?2:2.65}
         >
           <primitive object={nodes.mixamorigHips} />
           <skinnedMesh name="EyeLeft" geometry={nodes.EyeLeft.geometry} material={materials.Wolf3D_Eye} skeleton={nodes.EyeLeft.skeleton} />
@@ -80,7 +80,7 @@ const MyModelCanvas = () => {
       fov: 45,
       near: 0.1,
       far: 100,
-      position: isMobile ? [-2, 3.5, -8] : [-2, 3.5, 5], // Adjusted camera position
+      position: isMobile ? [-2, 3.5, 5] : [-2, 3.5, 5], // Adjusted camera position
     }}
     gl={{preserveDrawingBuffer: true}}>
       {/* have a loader while the moddel is loading, we use Suspense */}
