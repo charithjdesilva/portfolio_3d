@@ -12,7 +12,11 @@ const Model = (props) => {
   useEffect(() => {
     console.log(actions['Armature|mixamo.com|Layer0']);
 
-    group.current.rotation.y = -Math.PI / 4; // Rotate by -45 degrees
+    if (props.isMobile) {
+      group.current.rotation.y = -Math.PI; // Rotate by -180 degrees in the y-axis on mobile screens
+    } else {
+      group.current.rotation.y = -Math.PI / 4; // Rotate by -45 degrees on non-mobile screens
+    }
 
     actions['Armature.001|mixamo.com|Layer0'].play();
   });
