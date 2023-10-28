@@ -8,7 +8,7 @@ const Stars = (props) => {
   const ref = useRef();
 
   // Generate random star positions as a Float32Array
-  const starPositions = random.inSphere(new Float32Array(1000), { radius: 1.2 });
+  const starPositions = random.inSphere(new Float32Array(1000), { radius: 1 });
 
   useFrame((state, delta) => {
     ref.current.rotation.x -= delta / 100;

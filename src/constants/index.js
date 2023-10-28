@@ -49,7 +49,7 @@ import {
       title: "Education",
     },
     {
-      id: "projects",
+      id: "myProjects",
       title: "Projects",
     },
     {
