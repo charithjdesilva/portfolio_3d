@@ -27,6 +27,12 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
     animate: { opacity: 1, y: 0 },
   };
 
+  const mobileModalStyle = {
+    height: "100vh",
+    width: "100vw",
+    padding: "20px",
+  };
+
   return (
     <motion.div
       className="modal-overlay fixed top-0 left-0 w-full h-full flex items-center justify-center"
@@ -35,19 +41,21 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
       animate="animate"
       onClick={handleOverlayClick}
     >
-      <div className="container mx-auto" style={modalStyle}>
+      <div className="container mx-auto" style={window.innerWidth < 640 ? mobileModalStyle : modalStyle}>
         <motion.div
           className="modal-content p-4 grid grid-cols-1 sm:grid-cols-2 gap-4"
           variants={modalContentVariants}
           initial="initial"
           animate="animate"
-          transition={{ duration: 0.3 }} // Adjust the duration as needed
+          transition={{ duration: 0.3 }}
+          style={window.innerWidth < 640 ? { maxHeight: "90vh", overflowY: "auto" } : null}
         >
-          <div className="col-span-1 sm:col-span-1 flex items-center justify-center" style={{ height: "50vh" }}>
+          <div className="col-span-1 sm:col-span-1 flex items-center justify-center">
             <img
               src={project.image}
               alt={project.name}
-              className="img-fluid inline h-full max-w-30vw sm:max-w-70"
+              className="img-fluid inline max-w-100"
+              style={window.innerWidth < 640 ? { height: "auto" } : null}
             />
           </div>
           <div className="col-span-1 sm:col-span-1 flex flex-col items-center justify-center overflow-y-auto">
