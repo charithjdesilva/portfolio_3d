@@ -11,7 +11,7 @@ import { fadeIn, textVariant } from '../utils/motion';
 
 import ProjectModal from './ProjectModal';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link, onClick }) => {
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, live_link, onClick }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} onClick={onClick}>
       <Tilt
@@ -28,16 +28,19 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link, 
 
         <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
          {/* for live url */}
-         <div
-          onClick={() => window.open(source_code_link, "_blank")}
-          className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1'
-         >
-          <img 
-            src={www}
-            alt="live website"
-            className='w-3/4 h-3/4 object-contain'
-          />
-         </div>
+         {/* Conditionally render the "www" button if live_link is available */
+          live_link && (
+            <div
+              onClick={() => window.open(live_link, "_blank")}
+              className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1'
+            >
+              <img 
+                src={www}
+                alt="live website"
+                className='w-3/4 h-3/4 object-contain'
+              />
+            </div>
+          )}
 
          {/* github link */}
          <div
@@ -98,7 +101,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          I have been actively involved in various projects, both individually and in collaboration with teams. Notable projects include an ongoing Criminal Identification System with AI, achieving a remarkable accuracy of 0.983 in recognizing photos of criminals using computer vision and face-detection libraries. I've also developed a Face Recognition Attendance System, a Number Plate Catcher to identify and capture vehicle number plates, and an innovative Virtual Whiteboard that allows users to draw on air. Additionally, I've created a Spam Classification Model, utilizing Natural Language Processing to classify SMS messages with an accuracy of 0.97. Lastly, my Live Document Scanner project provides real-time video scanning capabilities using connected cameras. These projects showcase my interset in learning Python, OpenCV, NumPy, Dlib, React, FastAPI, MySQL, Pandas, NLTK, and Scikit-learn, reflecting my passion for exploring diverse aspects of AI, ML, and computer vision.
+          I have been actively involved in various projects, both individually and in collaboration with teams. Some notable projects are included here. An ongoing Criminal Identification System with AI, achieving a remarkable accuracy of 0.983 in recognizing photos of criminals using computer vision and face-detection libraries. I've also developed a Face Recognition Attendance System, a Number Plate Catcher to identify and capture vehicle number plates, and an innovative Virtual Whiteboard that allows users to draw on air. My Live Document Scanner project provides real-time video scanning capabilities using connected cameras. These projects showcase my interest in learning React, .NET with C#, Java, Python, OpenCV, NumPy, Dlib, MySQL, MsSQL, and Rest APIs reflecting my passion for exploring diverse aspects of Software Engineering. And this portfolio is also completely developed by myself.
         </motion.p>
       </div>
 

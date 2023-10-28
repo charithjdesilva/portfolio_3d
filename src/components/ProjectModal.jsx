@@ -60,16 +60,18 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
           </div>
           <div className="col-span-1 sm:col-span-1 flex flex-col items-center justify-center overflow-y-auto">
             <div className="flex flex-row mb-2">
-              <div
-                onClick={() => window.open(project.source_code_link, "_blank")}
-                className="black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover:bg-blue-500"
-              >
-                <img
-                  src={www}
-                  alt="live website"
-                  className="w-100 h-100 object-contain"
-                />
-              </div>
+              {project.live_link && (  // Conditionally render the "www" button
+                <div
+                  onClick={() => window.open(project.live_link, "_blank")}
+                  className="black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover:bg-blue-500"
+                >
+                  <img
+                    src={www}
+                    alt="live website"
+                    className="w-100 h-100 object-contain"
+                  />
+                </div>
+              )}
               <div
                 onClick={() => window.open(project.source_code_link, "_blank")}
                 className="black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover:bg-blue-500"

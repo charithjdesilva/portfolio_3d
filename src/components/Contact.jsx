@@ -124,23 +124,30 @@ const Contact = () => {
         </p>
         <div className="flex justify-center">
           <div
-            onClick={() => window.open("mailto:charithjdesilva@gmail.com", "_blank")}
-            className="black p-2 m-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover:bg-blue-500"
+            onClick={() =>
+              window.open("mailto:charithjdesilva@gmail.com", "_blank")
+            }
+            className="black p-2 m-2 w-12 h-12 rounded-full border border-blue-500 flex justify-center items-center cursor-pointer hover:bg-blue-500"
           >
             <img
               src={mail}
               alt="Gmail"
-              className="w-100 h-100 object-contain"
+              className="w-3/4 h-3/4 object-contain"
             />
           </div>
           <div
-            onClick={() => window.open("https://www.linkedin.com/in/charith-jayodya-de-silva-918115197/", "_blank")}
-            className="black p-2 m-1 w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover:bg-blue-500"
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/charith-jayodya-de-silva-918115197/",
+                "_blank"
+              )
+            }
+            className="black p-2 m-2 w-12 h-12 rounded-full border border-blue-500 flex justify-center items-center cursor-pointer hover:bg-blue-500"
           >
             <img
               src={linkedIn}
               alt="LinkedIn"
-              className="w-100 h-100 object-contain"
+              className="w-3/4 h-3/4 object-contain"
             />
           </div>
         </div>

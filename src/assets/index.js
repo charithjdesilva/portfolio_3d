@@ -41,6 +41,9 @@ import galleria from "./galleria.png";
 import gtoys from "./gtoys.png";
 import movieLookups from "./movieLookups.png";
 import twofac from "./twofac.png";
+import arthursWeather from "./arthursWeather.png";
+import libraryMS from "./libraryMS.png";
+import faceExtractor from "./faceExtractor.png";
 
 import IFS from "./achievements/IFS.png";
 import UoK from "./achievements/UoK.png";
@@ -94,5 +97,8 @@ export {
   movieLookups,
   twofac,
   linkedIn,
-  mail
+  mail,
+  libraryMS,
+  arthursWeather,
+  faceExtractor
 };

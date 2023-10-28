@@ -37,6 +37,9 @@ import {
     gtoys,
     movieLookups,
     twofac,
+    arthursWeather,
+    libraryMS,
+    faceExtractor,
     mail,
     linkedIn
   } from "../assets";
@@ -267,31 +270,53 @@ import {
   ];
   
   const projects = [
-    {
-      name: "Criminal Identification System with AI",
-      description:
-        "This system uses computer vision, face-detection library and dlib library to recognize photos of criminals. Accuracy : 0.983",
-      tags: [
-        {
-          name: "OpenCV",
-          color: "green-text-gradient",
-        },
-        {
-          name: "React",
-          color: "blue-text-gradient",
-        },
-        {
-          name: "MySQL",
-          color: "green-text-gradient",
-        },
-        {
-          name: "FastAPI",
-          color: "pink-text-gradient",
-        },
-      ],
-      image: carrent,
-      source_code_link: "https://github.com/charithjdesilva/Face-detection-system",
-    },
+      {
+        name: "Weather Web App",
+        description:
+          "A weather web application to display weather of the Colombo. And allowing users to searche weather of a location using lattitude and longtitude. Created based on a user story. Use email: 'mickeyarthur@gmail.com', password: 'Arthur@1234'",
+        tags: [
+          {
+            name: "React",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "Bootstrap",
+            color: "green-text-gradient",
+          },
+          {
+            name: "OpenWeather API",
+            color: "green-text-gradient",
+          },
+        ],
+        image: arthursWeather,
+        source_code_link: "https://github.com/charithjdesilva/arthursweather",
+        live_link: "https://arthursweather.vercel.app/login"
+      },  
+      {
+        name: "Criminal Identification System with AI",
+        description:
+          "This system uses computer vision, face-detection library and dlib library to recognize photos of criminals. Have done the testing with 13000 images. Accuracy : 0.983",
+        tags: [
+          {
+            name: "OpenCV",
+            color: "green-text-gradient",
+          },
+          {
+            name: "React",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "MySQL",
+            color: "green-text-gradient",
+          },
+          {
+            name: "FastAPI",
+            color: "pink-text-gradient",
+          },
+        ],
+        image: carrent,
+        source_code_link: "https://github.com/charithjdesilva/Face-detection-system",
+      },  
     {
       name: "Face Recognition Attendance System",
       description:
@@ -315,7 +340,7 @@ import {
         },
       ],
       image: jobit,
-      source_code_link: "https://github.com/charithjdesilva/Face-detection-system",
+      source_code_link: "https://github.com/charithjdesilva/Face-detection-system", 
     },
     {
       name: "Virtual Whiteboard",
@@ -379,6 +404,7 @@ import {
       ],
       image: visiventure,
       source_code_link: "https://github.com/charithjdesilva/visiventure",
+      live_link: "https://visiventure.netlify.app"
     },
     {
       name: "Galleria",
@@ -400,6 +426,7 @@ import {
       ],
       image: galleria,
       source_code_link: "https://github.com/charithjdesilva/Galleria",
+      live_link: "https://galleria-cj.netlify.app/"
     },
     {
       name: "2-Factor Authentication",
@@ -424,24 +451,41 @@ import {
         },
       ],
       image: twofac,
-      source_code_link: "https://github.com/charithjdesilva/Galleria",
+      source_code_link: "https://github.com/charithjdesilva/IAS-Project---group-07",
     },
     {
-      name: "Gryfindo Toys",
+      name: "Payroll System",
       description:
-        "This is a windows desktop application created using Windows forms. Implementation of OOP concepts is focused on this project. Also has utilized better UIs for the app.",
+        "This is a windows desktop application created using Windows forms and Microsoft SQL. Implementation of OOP concepts is focused on this project. Also has utilized better UIs for the app.",
       tags: [
         {
           name: "Windwos-forms with C#",
           color: "blue-text-gradient",
         },
         {
-          name: "Visual Studio 2015",
+          name: "MsSQL",
           color: "pink-text-gradient",
         },
       ],
       image: gtoys,
-      source_code_link: "https://github.com/charithjdesilva/Galleria",
+      source_code_link: "https://github.com/charithjdesilva/Payroll_System",
+    },
+    {
+      name: "Library Management System",
+      description:
+        "This is a desktop application created using Java Swing and MySQL. Implementation of OOP concepts is focused on this project. Also has utilized better UIs for the app.",
+      tags: [
+        {
+          name: "Java Swing",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "MySQL",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: libraryMS,
+      source_code_link: "https://github.com/charithjdesilva/LibraryManagementSystem_lms",
     },
     {
       name: "Movie-Lookups",
@@ -455,7 +499,29 @@ import {
       ],
       image: movieLookups,
       source_code_link: "https://github.com/charithjdesilva/movie_lookup",
+      live_link: "https://movie-lookups.netlify.app"
     },
+      {
+        name: "Face-Extractor",
+        description:
+          "Could not find a working face-extractore. So, I created one. This face extraction program will extract faces in an image. This uses dlib library and its \"shape_predictor_68_face_landmarks\".",
+        tags: [
+          {
+            name: "Python",
+            color: "blue-text-gradient",
+          },
+          {
+            name: "Dlib",
+            color: "pink-text-gradient",
+          },
+          {
+            name: "numPy",
+            color: "green-text-gradient",
+          },
+        ],
+        image: faceExtractor,
+        source_code_link: "https://github.com/charithjdesilva/Face-Extractor",
+      },
   ];
   
   export { services, technologies, experiences, testimonials, projects };
