@@ -144,8 +144,8 @@
 /* Modal Content */
 .modal-content {
   background: #000000; /* Background color for the modal */
-  padding-bottom: 100px;
-  padding-top: 100px;
+  padding-bottom: 50px;
+  padding-top: 50px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 100%; /* 70% of the minimum of viewport width and height */

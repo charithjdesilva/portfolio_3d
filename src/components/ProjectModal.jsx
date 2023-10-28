@@ -16,27 +16,22 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
     width: "75vw", // Set the modal's width to 75% of the viewport width
   };
 
-  const contentStyle = {
-    maxHeight: "50vh", // Set the maximum height for content to enable scrolling
-    overflowY: "auto", // Add a vertical scrollbar when content exceeds the maximum height
-  };
-
   return (
     <div
       className="modal-overlay fixed top-0 left-0 w-full h-full flex items-center justify-center"
       onClick={handleOverlayClick}
     >
-      <div className="container mx-auto" style={modalStyle}>
+      <div className="container mx-auto flex items-center justify-center" style={modalStyle}>
         <div className="modal-content p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div className="col-span-1 sm:col-span-1 flex items-center justify-center">
+          <div className="col-span-1 sm:col-span-1 flex items-center justify-center" style={{ height: "50vh" }}>
             {/* Apply responsive class to adjust image width on small screens */}
             <img
               src={project.image}
               alt={project.name}
-              className="img-fluid inline max-w-30vw sm:max-w-70"
+              className="img-fluid inline h-full max-w-30vw sm:max-w-70"
             />
           </div>
-          <div className="col-span-1 sm:col-span-1 flex flex-col items-center justify-center" style={contentStyle}>
+          <div className="col-span-1 sm:col-span-1 flex flex-col items-center justify-center overflow-y-auto">
             <div className="flex flex-row mb-2">
               <div
                 onClick={() => window.open(project.source_code_link, "_blank")}
