@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tilt } from 'react-tilt';
 import { motion } from 'framer-motion';
 
 import { styles } from '../styles';
 import { github, www } from '../assets';
-import { SectionWrapper } from '../hoc';
+// import { SectionWrapper } from '../hoc';
+import { SectionWrapper2 } from '../hoc';
 import { projects } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 
-const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
+import ProjectModal from './ProjectModal';
+
+const ProjectCard = ({ index, name, description, tags, image, source_code_link, onClick }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} onClick={() => window.open(source_code_link, "_blank")}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} onClick={onClick}>
       <Tilt
         option={{ 
           max:45,
@@ -69,6 +72,20 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
 }
 
 const Works = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    document.body.classList.add('modal-open'); // Add the class to hide the navbar
+    document.body.style.overflow = 'hidden'; // Disable scrolling
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    document.body.classList.remove('modal-open'); // Remove the class to show the navbar
+    document.body.style.overflow = 'auto'; // Re-enable scrolling
+  };
+
   return (
     <>
       <motion.div variants={textVariant()}>
@@ -92,11 +109,20 @@ const Works = () => {
             key={`project-${index}`}
             index={index}
             {...project}
+            onClick={() => openModal(project)}
            />
         ))}
       </div>
+
+      {/* Render the modal component */}
+      <ProjectModal
+        isOpen={selectedProject !== null}
+        project={selectedProject}
+        onClose={closeModal}
+      />
     </>
   )
 }
 
-export default SectionWrapper(Works, 'projects');
+// export default SectionWrapper(Works, 'myProjects');
+export default SectionWrapper2(Works, 'myProjects');
