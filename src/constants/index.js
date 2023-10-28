@@ -36,7 +36,9 @@ import {
     galleria,
     gtoys,
     movieLookups,
-    twofac
+    twofac,
+    mail,
+    linkedIn
   } from "../assets";
   
   export const navLinks = [

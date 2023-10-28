@@ -46,6 +46,9 @@ import IFS from "./achievements/IFS.png";
 import UoK from "./achievements/UoK.png";
 import UoW from "./achievements/UoW.png";
 
+import linkedIn from "./linkedIn.png";
+import mail from "./mail.png";
+
 export {
   logo,
   backend,
@@ -89,5 +92,7 @@ export {
   galleria,
   gtoys,
   movieLookups,
-  twofac
+  twofac,
+  linkedIn,
+  mail
 };

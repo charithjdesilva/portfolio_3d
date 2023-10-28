@@ -72,7 +72,7 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
               </div>
               <div
                 onClick={() => window.open(project.source_code_link, "_blank")}
-                className="black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover-bg-blue-500"
+                className="black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover:bg-blue-500"
               >
                 <img
                   src={github}
