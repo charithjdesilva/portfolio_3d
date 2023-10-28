@@ -1,5 +1,11 @@
 import React from "react";
 import { github, www } from "../assets";
+import { motion } from "framer-motion";
+
+const overlayVariants = {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+};
 
 const ProjectModal = ({ isOpen, project, onClose }) => {
   if (!isOpen) return null;
@@ -12,19 +18,32 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
   };
 
   const modalStyle = {
-    height: "75vh", // Set the modal's height to 75% of the viewport height
-    width: "75vw", // Set the modal's width to 75% of the viewport width
+    height: "75vh",
+    width: "75vw",
+  };
+
+  const modalContentVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
   };
 
   return (
-    <div
+    <motion.div
       className="modal-overlay fixed top-0 left-0 w-full h-full flex items-center justify-center"
+      variants={overlayVariants}
+      initial="initial"
+      animate="animate"
       onClick={handleOverlayClick}
     >
-      <div className="container mx-auto flex items-center justify-center" style={modalStyle}>
-        <div className="modal-content p-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="container mx-auto" style={modalStyle}>
+        <motion.div
+          className="modal-content p-4 grid grid-cols-1 sm:grid-cols-2 gap-4"
+          variants={modalContentVariants}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.3 }} // Adjust the duration as needed
+        >
           <div className="col-span-1 sm:col-span-1 flex items-center justify-center" style={{ height: "50vh" }}>
-            {/* Apply responsive class to adjust image width on small screens */}
             <img
               src={project.image}
               alt={project.name}
@@ -45,7 +64,7 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
               </div>
               <div
                 onClick={() => window.open(project.source_code_link, "_blank")}
-                className="black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover:bg-blue-500"
+                className="black w-10 h-10 rounded-full flex justify-center items-center cursor-pointer me-1 hover-bg-blue-500"
               >
                 <img
                   src={github}
@@ -67,9 +86,9 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
               Go Back
             </button>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
